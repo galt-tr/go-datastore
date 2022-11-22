@@ -88,6 +88,7 @@ type SQLConfig struct {
 	Name                      string                                  `json:"name" mapstructure:"name"`                                                 // database-name
 	Password                  string                                  `json:"password" mapstructure:"password" encrypted:"true"`                        // user-password
 	Port                      string                                  `json:"port" mapstructure:"port"`                                                 // 3306
+	SSLMode                   string                                  `json:"ssl_mode" mapstructure="ssl_mode"`                                         // disable by default
 	Replica                   bool                                    `json:"replica" mapstructure:"replica"`                                           // True if it's a replica (Read-Only)
 	SkipInitializeWithVersion bool                                    `json:"skip_initialize_with_version" mapstructure:"skip_initialize_with_version"` // Skip using MySQL in test mode
 	TimeZone                  string                                  `json:"time_zone" mapstructure:"time_zone"`                                       // timezone (IE: Asia/Shanghai)

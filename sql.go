@@ -233,7 +233,7 @@ func postgreSQLDialector(config *SQLConfig) gorm.Dialector {
 			" password=" + config.Password +
 			" dbname=" + config.Name +
 			" port=" + config.Port +
-			" sslmode=disable TimeZone=" + config.TimeZone,
+			" sslmode=" + config.SSLMode + " TimeZone=" + config.TimeZone,
 		PreferSimpleProtocol: true, // turn to TRUE to disable implicit prepared statement usage
 		WithoutReturning:     false,
 	}
